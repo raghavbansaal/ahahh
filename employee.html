@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <header class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex align-items-center">
+                <img src="img.jpeg" alt="Employee" class="rounded-circle border border-primary" style="width: 80px; height: 80px; object-fit: cover;">
+                <div class="ml-3">
+                    <h1 class="text-primary" id="employeeName">John Doe</h1>
+                    <p class="text-muted">Employee Dashboard</p>
+                </div>
+            </div>
+            <button id="logoutBtn" class="btn btn-danger">Logout</button>
+        </header>
+
+        <!-- Task Section -->
+        <section class="mb-5">
+            <h2 class="mb-4">My Tasks</h2>
+            <ul id="taskList" class="list-group">
+                <!-- Dynamically populated tasks -->
+                <li class="list-group-item">
+                    <strong>Task 1:</strong> Complete the website update
+                    <button class="btn btn-success btn-sm float-right">Mark as Completed</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Performance Section -->
+        <section class="mb-5">
+            <h2 class="mb-4">My Performance</h2>
+            <canvas id="employeePerformanceChart" width="400" height="200"></canvas>
+        </section>
+
+        <!-- Link to Manager Page -->
+        <section class="text-center">
+            <a href="manager.html" class="btn btn-secondary">Back to Manager Dashboard</a>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="employee.js" defer></script>
+</body>
+</html>
